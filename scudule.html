@@ -40,7 +40,7 @@
 					</svg>
 				</div>
 
-				<h1 class="header__title">Главная</h1>
+				<h1 class="header__title">Рассписание</h1>
 
 				<div class="header__arrow" role="img" aria-labelledby="arrow-desc">
 					<svg
@@ -61,6 +61,7 @@
 			</button>
 			<div class="hidden header__popup">
 				<ul class="header__popup-list">
+					<li class="header__popup-item"><a href="">Главная</a></li>
 					<li class="header__popup-item"><a href="">Оценки</a></li>
 					<li class="header__popup-item"><a href="">Атестаця</a></li>
 					<li class="header__popup-item"><a href="">Полезные ссылки</a></li>
@@ -73,7 +74,7 @@
 				<ul class="section-info__list">
 					<li class="section-info__item"><p>12.03.2026</p></li>
 					<li class="section-info__item">
-						<button class="button button--purple">ВП-22</button>
+						<button class="button button--purple button-main">ВП-22</button>
 					</li>
 					<li class="section-info__item"><p>Красная неделя</p></li>
 				</ul>
@@ -108,11 +109,56 @@
 						</li>
 						<li class="lesson-card">
 							<ul class="lesson-card__info-list">
-								<li class="lesson-card__subject">Разработка Веб...</li>
-								<li class="lesson-card__time">9:00 - 10:30</li>
-								<li class="lesson-card__teacher">Потапкина Ю.Ю.</li>
-								<li class="lesson-card__room">
-									<span class="lesson-card__room-value">104</span> каб.
+								<li class="lesson-card__subject lesson-card__item--left">Разработка Веб...</li>
+								<li class="lesson-card__time lesson-card__item--right">9:00 - 10:30</li>
+								<li class="lesson-card__teacher lesson-card__item--left">Потапкина Ю.Ю.</li>
+								<li class="lesson-card__room lesson-card__item--right">
+									<span class="lesson-card__room-value ">104</span> каб.
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="section-schedule__lessons-list">
+						<li class="lesson-number">
+							<p>2</p>
+						</li>
+						<li class="lesson-card">
+							<ul class="lesson-card__info-list">
+								<li class="lesson-card__subject lesson-card__item--left">Операционные системы и програмирование</li>
+								<li class="lesson-card__time lesson-card__item--right">9:00 - 10:30</li>
+								<li class="lesson-card__teacher lesson-card__item--left">Потапкина Ю.Ю.</li>
+								<li class="lesson-card__room lesson-card__item--right">
+									<span class="lesson-card__room-value ">104</span> каб.
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="section-schedule__lessons-list">
+						<li class="lesson-number">
+							<p>3</p>
+						</li>
+						<li class="lesson-card">
+							<ul class="lesson-card__info-list">
+								<li class="lesson-card__subject lesson-card__item--left">Основы алгоритмизации и програмирования</li>
+								<li class="lesson-card__time lesson-card__item--right">9:00 - 10:30</li>
+								<li class="lesson-card__teacher lesson-card__item--left">Потапкина Ю.Ю.</li>
+								<li class="lesson-card__room lesson-card__item--right">
+									<span class="lesson-card__room-value ">104</span> каб.
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="section-schedule__lessons-list">
+						<li class="lesson-number">
+							<p>4</p>
+						</li>
+						<li class="lesson-card">
+							<ul class="lesson-card__info-list">
+								<li class="lesson-card__subject lesson-card__item--left">Истроия России</li>
+								<li class="lesson-card__time lesson-card__item--right">9:00 - 10:30</li>
+								<li class="lesson-card__teacher lesson-card__item--left">Потапкина Ю.Ю.</li>
+								<li class="lesson-card__room lesson-card__item--right">
+									<span class="lesson-card__room-value ">104</span> каб.
 								</li>
 							</ul>
 						</li>
@@ -166,7 +212,18 @@
 		<footer class="footer">
 			<div class="footer__main"></div>
 		</footer>
-		<div>
+			<dialog class="choose-popup">
+				<div class="choose-popup__content">
+					<button class="choose-popup__close-btn">✕</button>
+					<h2 class="choose-popup__title">Выберите</h2>
+					<form class="choose-popup__form">
+					<input class="choose-popup__input" type="text" placeholder="Пример: ВП-12/108/Ковалев" required>
+					<button class="choose-popup__btn choose-popup__btn--favorites">Добавить в закладки</button>
+					<button class="choose-popup__btn choose-popup__btn--choose">Выбрать</button>
+					</form>
+				</div>
+			</dialog>
 		<script src="index.js"></script>
+		<script src="popup.js"></script>
 	</body>
 </html>

@@ -101,6 +101,9 @@ body {
 	width: 100px;
 }
 .section-schedule {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 	justify-items: center;
 	background-color: #1e1f32;
 	border-radius: 26px;
@@ -129,10 +132,16 @@ body {
 	background-color: #6785fb;
 	height: 40px;
 }
+.section-schedule__lessons{
+	display: flex;
+	flex-direction: column;
+	gap:10px;
+}
 .section-schedule__lessons-list {
 	display: flex;
 	list-style: none;
 	align-items: center;
+	padding: 0;
 	margin: 0;
 }
 .lesson-number {
@@ -155,18 +164,31 @@ body {
 .lesson-card__info-list {
 	list-style: none;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1.5fr 1fr;
+	padding: 8px;
+	gap: 10px;
+	font-size: 14px;
 }
 .lesson-card__info-list li {
-	border: 1px red solid;
-	width: 100%;
+	width: 90%;
 	height: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .lesson-card {
 	background-color: #2e2e30;
 	height: 64px;
 	border-radius: 20px;
 	margin-left: -25px;
+	width: 100%;
+}
+.lesson-card__item--left{
+margin-left: 15px;
+}
+.lesson-card__item--right{
+	text-align: right;
+	margin-right: 20px;
 }
 .footer {
 	display: flex;
@@ -204,4 +226,56 @@ body {
 	height: 55px;
 	width: 100%;
 	border-radius: 26px;
+}
+.choose-popup{
+	background-color: #242537;
+	border-radius: 20px;
+	border:  #6785fb solid 1px;
+	width: 90%;
+	padding: 0;
+}
+.choose-popup__content{
+	padding: 20px;
+	background-color: #242537;
+	border-radius: 20px;
+	border:  #6785fb solid 1px;
+}
+.choose-popup::backdrop {
+	background: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(2px);
+	cursor: pointer;
+}  
+.choose-popup__form{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+	"input input"
+	"favorites choose";
+	gap: 20px;
+}
+.choose-popup__close-btn{
+	display: block;
+	margin-left: auto;
+	background: none;
+	border: none;
+}
+.choose-popup__title{
+	text-align: center;
+}
+.choose-popup__btn{
+	background-color: #6785fb;
+	border-radius: 20px;
+	border: none;
+}
+.choose-popup input[type="text"]{
+	background-color: #2e2e30;
+	border-radius: 20px;
+	border: #6785fb 1px solid 	;
+	grid-area: input;
+}
+.choose-popup__btn--choose{
+	grid-area: choose;
+}
+.choose-popup__btn--favorites{
+	grid-area: favorites;
 }
