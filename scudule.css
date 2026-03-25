@@ -7,10 +7,14 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	gap: 10px;
 }
 
 main {
+	display: flex;
+	flex-direction: column;
 	flex: 1;
+	gap: 10px;
 }
 body {
 	background-color: #121227;
@@ -36,6 +40,7 @@ body {
 }
 .header__title {
 	font-size: 20px;
+
 }
 .header__popup {
 	left: 0;
@@ -77,28 +82,50 @@ body {
 	transform: rotate(180deg);
 }
 .section-info {
+	width: 100%;
 	justify-self: center;
 }
 .section-info__list {
 	margin: 0;
 	padding: 0;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	display: flex;
 	width: 100%;
 	gap: 20px;
-	align-content: center;
-	align-items: center;
 	list-style: none;
+	justify-items: center;
+	align-content: center;
 }
 .section-info__item .button {
-	height: 60px;
-	width: 80px;
+	height: 55px;
+	padding: 10px;
 	background-color: #6785fb;
 	border-radius: 20px;
 	border: #242537 1px solid;
 }
-.section-info__item {
-	width: 100px;
+.section-info__item-text {
+	background-color: #2e2e30;
+	border-radius: 20px;
+	justify-items: center;
+	height: 50px;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	font-weight: bold;
+	font-size: 16px;
+	align-content: center;
+}
+.button-main{
+	font-size: 16px;
+	font-weight: bold;
+
+}
+.button-main:hover{
+	transform: scale(1.1);
+	transition: ease-in-out 0.3s;
+}
+.button-main:active{
+	background-color: #4b5fb3;
+	transition: ease-in-out 0.1s;
 }
 .section-schedule {
 	display: flex;
@@ -117,20 +144,22 @@ body {
 	list-style-type: none;
 	gap: 10px;
 	align-items: center;
+	justify-self: center;
+	height: 40px;
 }
-.button--active {
-	background-color: #6785fb;
-}
-.section-schedule__week-item .button {
+.button-week {
 	width: 44px;
 	height: 30px;
 	background-color: #242537;
 	border-radius: 20px;
 	border: 1px solid #6785fb;
+	font-weight: bold;
+	transition: ease 0.4s;
 }
-.section-schedule__week-item .button--active {
+.button--active {
 	background-color: #6785fb;
 	height: 40px;
+	transition: ease 0.4s;
 }
 .section-schedule__lessons{
 	display: flex;
@@ -164,7 +193,7 @@ body {
 .lesson-card__info-list {
 	list-style: none;
 	display: grid;
-	grid-template-columns: 1.5fr 1fr;
+	grid-template-columns: 2fr 1fr;
 	padding: 8px;
 	gap: 10px;
 	font-size: 14px;
@@ -174,7 +203,6 @@ body {
 	height: 100%;
 	white-space: nowrap;
 	overflow: hidden;
-	text-overflow: ellipsis;
 }
 .lesson-card {
 	background-color: #2e2e30;
@@ -185,10 +213,10 @@ body {
 }
 .lesson-card__item--left{
 margin-left: 15px;
+text-overflow: ellipsis;
 }
 .lesson-card__item--right{
 	text-align: right;
-	margin-right: 20px;
 }
 .footer {
 	display: flex;

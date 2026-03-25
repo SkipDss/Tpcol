@@ -58,7 +58,6 @@ body {
 	padding: 10px;
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: bold;
 	font-style: normal;
 }
 .header__title {
@@ -136,6 +135,7 @@ main {
 }
 .hero {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
@@ -153,11 +153,12 @@ main {
 	color: #6785fb;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 10px;
+	font-size: 20px;
 	line-height: 20px;
 	margin: 0;
 	padding: 0;
 	width: 100%;
+	text-align: center;
 }
 .hero__list {
 	color: white;
@@ -178,6 +179,8 @@ main {
 	font-weight: bold;
 	font-style: normal;
 	transition: ease 0.2s;
+	text-decoration: none;
+	align-content: center;
 }
 .actions__button--purple:hover {
 	transform: scale(1.01);
