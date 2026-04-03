@@ -103,7 +103,7 @@
 					</ul>
 				</div>
 				<div class="section-schedule__lessons">
-					<ul class="section-schedule__lessons-list">
+					<!-- <ul class="section-schedule__lessons-list">
 						<li class="lesson-number">
 							<p>1</p>
 						</li>
@@ -162,7 +162,7 @@
 								</li>
 							</ul>
 						</li>
-					</ul>
+					</ul> -->
 				</div>
 			</section>
 			<section class="section-favourites">
@@ -223,6 +223,23 @@
 					</form>
 				</div>
 			</dialog>
+			<template id="lesson-card_template">
+				<ul class="section-schedule__lessons-list">
+					<li class="lesson-number">
+						<p></p>
+					</li>
+					<li class="lesson-card">
+						<ul class="lesson-card__info-list">
+							<li class="lesson-card__subject lesson-card__item--left"></li>
+							<li class="lesson-card__time lesson-card__item--right"></li>
+							<li class="lesson-card__teacher lesson-card__item--left"></li>
+							<li class="lesson-card__room lesson-card__item--right">
+								<span class="lesson-card__room-value "></span> каб.
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</template>
 		<script src="index.js"></script>
 		<script src="popup.js"></script>
 		<script src="schdule.js"></script>
