@@ -1,0 +1,32 @@
+@media (min-width: 768px) {
+	main {
+		width: 60%;
+		margin: 0 auto;
+	}
+	.section-info__item .button {
+		min-width: 100px;
+	}
+	.header--mobile {
+		display: none;
+	}
+	.header--desktop {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		padding: 0 40px;
+	}
+	.header--desktop ul {
+		display: flex;
+		gap: 20px;
+		list-style: none;
+		font-weight: 500;
+	}
+	.header--desktop li {
+		text-align: center;
+	}
+}
+@media (min-width: 768px) {
+	.actions__list {
+		background: none;
+	}
+}

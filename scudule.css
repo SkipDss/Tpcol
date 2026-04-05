@@ -9,7 +9,10 @@
 	min-height: 100vh;
 	gap: 10px;
 }
-
+a {
+	text-decoration: none;
+	color: white;
+}
 main {
 	display: flex;
 	flex-direction: column;
@@ -21,7 +24,6 @@ body {
 }
 .header {
 	position: relative;
-	color: white;
 }
 .header__top {
 	width: 100%;
@@ -77,11 +79,21 @@ body {
 .header__arrow {
 	transition: transform 0.3s ease;
 }
+
 .header__top.active .header__arrow {
 	transform: rotate(180deg);
 }
+.header--desktop {
+	display: none;
+	background: #242537;
+	border-radius: 26px;
+	height: 60px;
+}
+.header--mobile {
+	display: block;
+}
 .section-info {
-	width: 100%;
+	margin: 0;
 	justify-self: center;
 }
 .section-info__list {
