@@ -7,7 +7,7 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	gap: 10px;
+	gap: 15px;
 }
 a {
 	text-decoration: none;
@@ -239,8 +239,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	padding: 0 15px;
-	margin-top: 10px;
+	margin-top: 50px;
 }
 
 .footer__main {

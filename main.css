@@ -233,7 +233,6 @@ main {
 		"third-left third-right"
 		"fourth fourth";
 	list-style: none;
-	background-color: #242537;
 	border-radius: 20px;
 	justify-content: center;
 	align-content: center;
@@ -292,8 +291,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	padding: 0 15px;
-	margin-top: 10px;
+	margin-top: 50px;
 }
 
 .footer__main {

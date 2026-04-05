@@ -13,62 +13,62 @@ chooseBtn.addEventListener("click", () => {
 
 // PlaceHolder
 
-// const API = {
-// 	week_type: "Красная",
-// 	schedule: {
-// 		monday: {
-// 			date: "2025-03-24",
-// 			pairs: [
-// 				{
-// 					number: 1,
-// 					subject: "ОСИС",
-// 					teacher: "Ферапонтов В.А.",
-// 					time: "09:00-10:30",
-// 					room: "108",
-// 					substitution: null,
-// 				},
-// 				{
-// 					number: 2,
-// 					subject: "Физика",
-// 					teacher: "Гвоздикова О.С.",
-// 					time: "10:40-12:10",
-// 					room: "408",
-// 					substitution: {
-// 						subject: "Программирование",
-// 						teacher: "Иванова М.И.",
-// 						time: "10:40-12:10",
-// 						room: "205",
-// 					},
-// 				},
-// 				{
-// 					number: 3,
-// 					subject: "Математика",
-// 					teacher: "Петров А.А.",
-// 					time: "12:20-13:50",
-// 					room: "301",
-// 					substitution: null,
-// 				},
-// 			],
-// 		},
-// 		tuesday: {
-// 			date: "2025-03-25",
-// 			pairs: [
-// 				{
-// 					number: 1,
-// 					subject: "История",
-// 					teacher: "Сидорова Е.В.",
-// 					time: "09:00-10:30",
-// 					room: "202",
-// 					substitution: null,
-// 				},
-// 			],
-// 		},
-// 		wednesday: { date: "2025-03-26", pairs: [] },
-// 		thursday: { date: "2025-03-27", pairs: [] },
-// 		friday: { date: "2025-03-28", pairs: [] },
-// 		saturday: { date: "2025-03-29", pairs: [] },
-// 	},
-// };
+const API = {
+	week_type: "Красная",
+	schedule: {
+		monday: {
+			date: "2025-03-24",
+			pairs: [
+				{
+					number: 1,
+					subject: "ОСИС",
+					teacher: "Ферапонтов В.А.",
+					time: "09:00-10:30",
+					room: "108",
+					substitution: null,
+				},
+				{
+					number: 2,
+					subject: "Физика",
+					teacher: "Гвоздикова О.С.",
+					time: "10:40-12:10",
+					room: "408",
+					substitution: {
+						subject: "Программирование",
+						teacher: "Иванова М.И.",
+						time: "10:40-12:10",
+						room: "205",
+					},
+				},
+				{
+					number: 3,
+					subject: "Математика",
+					teacher: "Петров А.А.",
+					time: "12:20-13:50",
+					room: "301",
+					substitution: null,
+				},
+			],
+		},
+		tuesday: {
+			date: "2025-03-25",
+			pairs: [
+				{
+					number: 1,
+					subject: "История",
+					teacher: "Сидорова Е.В.",
+					time: "09:00-10:30",
+					room: "202",
+					substitution: null,
+				},
+			],
+		},
+		wednesday: { date: "2025-03-26", pairs: [] },
+		thursday: { date: "2025-03-27", pairs: [] },
+		friday: { date: "2025-03-28", pairs: [] },
+		saturday: { date: "2025-03-29", pairs: [] },
+	},
+};
 
 // Верхний блок
 function updateInfo(dayKey) {
