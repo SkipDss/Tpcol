@@ -3,14 +3,15 @@ let scheduleContainer = document.querySelector(".section-schedule__lessons");
 let scheduleTemplate = document.getElementById("lesson-card_template");
 let lessonElement = scheduleTemplate.content.cloneNode(true);
 
-weekButtons.forEach((weekButton) => {
-	weekButton.addEventListener("click", () => {
-		weekButtons.forEach((weekButton) => {
-			weekButton.classList.remove("button--active");
-		});
-		weekButton.classList.toggle("button--active");
-	});
+// ФОРМА TODO
+const chooseBtn = document.querySelector(".choose-popup__btn--choose");
+
+chooseBtn.addEventListener("click", () => {
+	const inputElement = document.querySelector(".choose-popup__input");
+	const userValue = inputElement.value.trim();
 });
+
+// PlaceHolder
 
 const API = {
 	week_type: "Красная",
@@ -69,6 +70,7 @@ const API = {
 	},
 };
 
+// Верхний блок
 function updateInfo(dayKey) {
 	const dayData = API.schedule[dayKey];
 	if (!dayData) return;
@@ -91,6 +93,8 @@ function updateInfo(dayKey) {
 	if (groupButton) groupButton.textContent = "ВП-22";
 }
 
+// Перевод в нормальную форму
+
 const dayMap = {
 	Пн: "monday",
 	Вт: "tuesday",
@@ -100,6 +104,7 @@ const dayMap = {
 	Сб: "saturday",
 };
 
+// Фабрика пар
 const container = document.querySelector(".section-schedule__container");
 const template = document.getElementById("lesson-card_template");
 const buttons = document.querySelectorAll(".button-week");
@@ -134,7 +139,7 @@ function renderSchedule(dayKey) {
 
 		if (pair.substitution) {
 			const lessonNumberElement = clone.querySelector(".lesson-number");
-			lessonNumberElement.style.backgroundColor = "red";
+			lessonNumberElement.style.backgroundColor = "#e9460b";
 			// const subBadge = document.createElement('span');
 			// subBadge.textContent = 'Зам.';
 			// subBadge.style.fontSize = '10px';
@@ -144,7 +149,7 @@ function renderSchedule(dayKey) {
 		container.appendChild(clone);
 	});
 }
-
+//Кнопки дней
 buttons.forEach((btn) => {
 	btn.addEventListener("click", () => {
 		buttons.forEach((b) => b.classList.remove("button--active"));
@@ -154,26 +159,19 @@ buttons.forEach((btn) => {
 		if (dayKey) renderSchedule(dayKey);
 	});
 });
-
+// Сегодняшний день
 function getTodayButtonText() {
 	const days = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
 	const today = new Date();
 	const dayIndex = today.getDay();
-	return days[dayIndex];
+	const dayText = days[dayIndex];
+	return dayText === "Вс" ? "Пн" : dayText;
 }
-
+//Та же хуйня я просто не понял как впихнуть тоже
 function getDayKeyFromButtonText(buttonText) {
-	const map = {
-		Пн: "monday",
-		Вт: "tuesday",
-		Ср: "wednesday",
-		Чт: "thursday",
-		Пт: "friday",
-		Сб: "saturday",
-	};
-	return map[buttonText];
+	return dayMap[buttonText];
 }
-
+// Обработка сегоднешнего дня
 const todayButtonText = getTodayButtonText();
 const todayKey = getDayKeyFromButtonText(todayButtonText);
 if (todayKey) {

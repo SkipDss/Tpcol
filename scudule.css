@@ -263,15 +263,13 @@ body {
 .choose-popup {
 	background-color: #242537;
 	border-radius: 20px;
-	border: #6785fb solid 1px;
+	border: #6784fb52 solid 1px;
 	width: 90%;
 	padding: 0;
 }
 .choose-popup__content {
 	padding: 20px;
-	background-color: #242537;
 	border-radius: 20px;
-	border: #6785fb solid 1px;
 }
 .choose-popup::backdrop {
 	background: rgba(0, 0, 0, 0.7);
@@ -299,12 +297,16 @@ body {
 	background-color: #6785fb;
 	border-radius: 20px;
 	border: none;
+	font-size: 16px;
+	padding: 10px;
 }
 .choose-popup input[type="text"] {
 	background-color: #2e2e30;
 	border-radius: 20px;
 	border: #6785fb 1px solid;
 	grid-area: input;
+	padding: 10px 30px;
+	font-size: 16px;
 }
 .choose-popup__btn--choose {
 	grid-area: choose;
